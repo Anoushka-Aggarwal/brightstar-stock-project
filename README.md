@@ -29,14 +29,14 @@ useEffect(() => {
 ### -> TABLE
 - Real-time table display
 - Color-coded price changes
-- use ANT Design tables
+- use ANT Design tables [https://ant.design/components/table]
 -- add sorting to Relevant Columns (follow up questions related to this)
 -- refer, TradingView Screener Nasdaq 100 for design inspiration
 -- research Finance friendly fonts, and use them. place .wolff files in /public folder
 
 ### -> Line Chart
-- The simulated snapshot data should be plotted live as a line chart of close LTP value every 10seconds.[no backfill, you can use states within jsx, or store the snapshot from the start of dev website in chrome local storage]
-- Library - Highcharts
+- The simulated snapshot data should be plotted live as a line chart (single series) of close LTP value every 10seconds.[no backfill, you can use states within jsx, or store the snapshot from the start of dev website in chrome local storage]
+- Library - Highcharts [https://api.highcharts.com/highcharts/series.line]
 - plot just two symbols, GOOG and NVDA, LTP(price) vs system time(windows time)
 - The line should have markers for each 10 second close.
 - markers should be visible only on hover
