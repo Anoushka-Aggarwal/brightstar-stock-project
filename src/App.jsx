@@ -24,7 +24,7 @@ export default function App() {
   console.log('Appewefwe fiewjf');
   return (
     <div style={{ padding: '20px', backgroundColor: '#ffffff', color: '#000000', minHeight: '100vh' }}>
-    <h1>Stock Dashboard</h1>
+    <h1>Real Time Stock Dashboard</h1>
     <LiveTable stocks={stocks} prevStocks={prevStocks} />
     <div style={{ marginTop: '40px' }}>
       <LiveChart stocks={stocks} />
