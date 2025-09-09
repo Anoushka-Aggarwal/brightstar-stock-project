@@ -1,36 +1,27 @@
-/* ============================================ */
-/* Roboto Variable Font Setup */
-/* ============================================ */
 @font-face {
   font-family: 'Roboto';
   src: url('/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900; /* all variable font weights */
+  font-weight: 100 900;
   font-style: normal;
 }
 
-/* ============================================ */
-/* Global Styles */
-/* ============================================ */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff; /* white background */
-  color: #000000;            /* black text */
+  background-color: #ffffff;
+  color: #000000;  
   margin: 0;
   padding: 0;
 }
 
-/* ============================================ */
-/* Table Styles for Ant Design */
-/* ============================================ */
 .ant-table {
-  background-color: #ffffff; /* white table background */
-  color: #000000;            /* black text */
+  background-color: #ffffff;
+  color: #000000;
   border: 1px solid #ddd;
 }
 
 .ant-table-thead > tr > th {
   color: #000000;
-  background-color: #f2f2f2; /* light gray header */
+  background-color: #f2f2f2;
   font-weight: 600;
 }
 
@@ -39,33 +30,26 @@ body {
   font-weight: 400;
 }
 
-/* Price change colors */
 td.price-up {
-  color: #008000; /* green for positive */
+  color: #008000;
 }
 
 td.price-down {
-  color: #FF0000; /* red for negative */
+  color: #FF0000;
 }
 
-/* Table hover */
 .ant-table-tbody > tr:hover > td {
   background-color: #f9f9f9;
 }
 
-/* ============================================ */
-/* Line Chart Styles (Highcharts) */
-/* ============================================ */
 .highcharts-container {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff; /* chart background white */
+  background-color: #ffffff;
   color: #000000;
 }
 
-/* ============================================ */
-/* Miscellaneous */
 a {
-  color: #0077cc; /* blue for links */
+  color: #0077cc;
   text-decoration: none;
 }
 
