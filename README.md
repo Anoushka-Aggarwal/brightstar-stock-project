@@ -1,6 +1,7 @@
-## Quick Start
+## Vite Config
 
-```bash
+## Run scripts
+```zsh
 npm install
 npm run dev
 ```
@@ -24,8 +25,8 @@ useEffect(() => {
 }, []);
 ```
 
-## TODO 
--> TABLE
+# TODO 
+### -> TABLE
 - Real-time table display
 - Color-coded price changes
 - use ANT Design tables
@@ -33,7 +34,7 @@ useEffect(() => {
 -- refer, TradingView Screener Nasdaq 100 for design inspiration
 -- research Finance friendly fonts, and use them. place .wolff files in /public folder
 
--> Line Chart
+### -> Line Chart
 - The simulated snapshot data should be plotted live as a line chart of close LTP value every 10seconds.[no backfill, you can use states within jsx, or store the snapshot from the start of dev website in chrome local storage]
 - Library - Highcharts
 - plot just two symbols, GOOG and NVDA, LTP(price) vs system time(windows time)
@@ -43,11 +44,14 @@ useEffect(() => {
 - tooltip = just show the close LTP value
 
 
--> Websites you can refer: 
-    smartoptions.com
-    tradingview.com
-    cme.com
-    drw.com
-    maven securities
-    refinitiv
+### -> Websites you can refer: 
+- smartoptions.com [https://smartoptions.trendlyne.com/dashboard/options/30-sep-2025/]
+- tradingview.com [https://www.tradingview.com/screener/4gzZXrYt/]
+- cme.com [https://www.cmegroup.com/]
+- simply wall st. [https://simplywall.st/]
+- drw.com [https://www.drw.com/]
+- maven securities [https://www.mavensecurities.com/]
+- refinitiv (now named LSEG) [https://www.lseg.com/en/data-analytics]
+- bloomberg [https://www.bloomberg.com/markets/watchlist]
+- straddlechart.com [https://straddlechart.com/]
 
