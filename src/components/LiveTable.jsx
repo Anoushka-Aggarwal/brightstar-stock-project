@@ -85,8 +85,8 @@ export default function LiveTable({ stocks, prevStocks }) {
       title: "Sector",
       dataIndex: "sector",
       key: "sector",
+      render: (sector) => <span className="sector-text">{sector}</span>,
     },
-    
   ];
 
   return (
@@ -95,6 +95,7 @@ export default function LiveTable({ stocks, prevStocks }) {
       columns={columns}
       rowKey="symbol"
       pagination={false}
+      className="custom-table"
     />
   );
 }

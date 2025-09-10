@@ -1,27 +1,40 @@
+.custom-table .ant-table-thead > tr > th {
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 12px;
+}
+
+.symbol-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.symbol-short {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.symbol-full {
+  font-size: 12px;
+  color: #888;
+}
+
 .price-up {
-    color: #16a34a;
-    font-weight: 600;
-  }
-  
-  .price-down {
-    color: #dc2626;
-    font-weight: 600;
-  }
-  
-  .symbol-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .symbol-short {
-    font-weight: 600;
-    font-size: 14px;
-    color: #111827;
-  }
-  
-  .symbol-full {
-    font-size: 12px;
-    color: #6b7280;
-  }
-  
+  color: #16c784;
+  font-weight: 500;
+}
+
+.price-down {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+.sector-text {
+  color: #1a73e8;
+  font-weight: 500;
+}
