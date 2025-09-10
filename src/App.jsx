@@ -20,7 +20,6 @@ export default function App() {
     };
   }, []);
 
-  console.log('Appewefwe fiewjf');
   return (
     <div style={{ padding: '20px', backgroundColor: '#ffffff', color: '#000000', minHeight: '100vh' }}>
     <h1>Real Time Stock Dashboard</h1>
