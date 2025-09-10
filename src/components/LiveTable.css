@@ -1,0 +1,10 @@
+.price-up {
+    color: #16a34a; /* green */
+    font-weight: 600;
+  }
+  
+  .price-down {
+    color: #dc2626; /* red */
+    font-weight: 600;
+  }
+  

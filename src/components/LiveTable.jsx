@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import "antd/dist/reset.css";
+import "./LiveTable.css"; // import custom styles
 
 export default function LiveTable({ stocks, prevStocks }) {
   const getPriceChange = (symbol, price) => {
@@ -23,7 +24,7 @@ export default function LiveTable({ stocks, prevStocks }) {
       render: (price, record) => {
         const change = getPriceChange(record.symbol, price);
         const className =
-          change > 0 ? "green" : change < 0 ? "red" : "white";
+          change > 0 ? "price-up" : change < 0 ? "price-down" : "";
         return (
           <span className={className}>
             {price !== undefined && price !== null
@@ -35,12 +36,12 @@ export default function LiveTable({ stocks, prevStocks }) {
     },
     {
       title: "% Change",
-      dataIndex: "priceChange", // use priceChange from sim.js
+      dataIndex: "priceChange", // coming from your sim.js
       key: "priceChange",
       sorter: (a, b) => a.priceChange - b.priceChange,
       render: (change) => {
         const className =
-          change > 0 ? "green" : change < 0 ? "red" : "white";
+          change > 0 ? "price-up" : change < 0 ? "price-down" : "";
         return (
           <span className={className}>
             {change !== undefined && change !== null
