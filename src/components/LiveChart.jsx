@@ -3,13 +3,11 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { marketDataAPI } from "../simulator/sim";
 
-// Storage key for local persistence
 const STORAGE_KEY = "ltp_chart_data";
 
 export default function LiveChart() {
   const [chartData, setChartData] = useState({ GOOG: [], NVDA: [] });
 
-  // Load saved chart data from localStorage on mount
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -42,7 +40,6 @@ export default function LiveChart() {
             newData.GOOG = newData.GOOG.filter(([t]) => t >= cutoff);
             newData.NVDA = newData.NVDA.filter(([t]) => t >= cutoff);
 
-            // Save to localStorage
             localStorage.setItem(STORAGE_KEY, JSON.stringify(newData));
 
             return newData;
@@ -68,7 +65,7 @@ export default function LiveChart() {
     xAxis: {
       type: "datetime",
       title: { text: "System Time" },
-      crosshair: true, // free move crosshair
+      crosshair: true,
     },
     yAxis: {
       title: { text: "LTP (USD)" },
@@ -84,7 +81,7 @@ export default function LiveChart() {
         marker: {
           enabled: false,
           states: {
-            hover: { enabled: true }, // only visible on hover
+            hover: { enabled: true },
           },
         },
       },

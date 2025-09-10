@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import "antd/dist/reset.css";
-import "./LiveTable.css"; // import custom styles
+import "./LiveTable.css";
 
 export default function LiveTable({ stocks, prevStocks }) {
   const getPriceChange = (symbol, price) => {
@@ -10,14 +10,30 @@ export default function LiveTable({ stocks, prevStocks }) {
     return price - prev.price;
   };
 
+  const formatVolume = (volume) => {
+    if (volume >= 1_000_000) {
+      return (volume / 1_000_000).toFixed(2) + "M";
+    }
+    if (volume >= 1_000) {
+      return (volume / 1_000).toFixed(0) + "K";
+    }
+    return volume;
+  };
+
   const columns = [
     {
       title: "Symbol",
       dataIndex: "symbol",
       key: "symbol",
+      render: (symbol, record) => (
+        <div className="symbol-cell">
+          <span className="symbol-short">{symbol}</span>
+          <span className="symbol-full">{record.description}</span>
+        </div>
+      ),
     },
     {
-      title: "Price",
+      title: "Last Price",
       dataIndex: "price",
       key: "price",
       sorter: (a, b) => a.price - b.price,
@@ -36,7 +52,7 @@ export default function LiveTable({ stocks, prevStocks }) {
     },
     {
       title: "% Change",
-      dataIndex: "priceChange", // coming from your sim.js
+      dataIndex: "priceChange",
       key: "priceChange",
       sorter: (a, b) => a.priceChange - b.priceChange,
       render: (change) => {
@@ -55,7 +71,22 @@ export default function LiveTable({ stocks, prevStocks }) {
       title: "Volume",
       dataIndex: "volume",
       key: "volume",
+      sorter: (a, b) => a.volume - b.volume,
+      render: (volume) => <span>{formatVolume(volume)}</span>,
     },
+    {
+      title: "Market Cap",
+      dataIndex: "marketCap",
+      key: "marketCap",
+      sorter: (a, b) => a.marketCap - b.marketCap,
+      render: (val) => (val ? (val / 1_000_000_000).toFixed(2) + "B" : "-"),
+    },
+    {
+      title: "Sector",
+      dataIndex: "sector",
+      key: "sector",
+    },
+    
   ];
 
   return (

@@ -18,7 +18,6 @@ export default function App() {
       unsubscribe();
       marketDataAPI.stop();
     };
-    // eslint-disable-next-line
   }, []);
 
   console.log('Appewefwe fiewjf');
